@@ -1,0 +1,22 @@
+{
+  "name": "qaguru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuhnovRoman/QaGuru.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuhnovRoman/QaGuru/issues"
+  },
+  "homepage": "https://github.com/YuhnovRoman/QaGuru#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.10"
+  }
+}
