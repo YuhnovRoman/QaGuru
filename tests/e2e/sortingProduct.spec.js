@@ -1,7 +1,9 @@
 import { test } from "../../src/fixtures/fixture";
 import { expect } from "@playwright/test";
 
-test("Отображение 10 товаров на главной странице", async ({ app }) => {
+test("Отображение 10 товаров на главной странице", {
+    tag: "@e2e",
+}, async ({ app }) => {
     await app.sortingPage.goToMainPage();
     await test.step("По умолчанию выбрана сортировка на 25 продуктов", async () => {
         await expect(app.sortingPage.viewInfo).toBeVisible();
@@ -14,7 +16,9 @@ test("Отображение 10 товаров на главной страни�
     });
 });
 
-test("Отображение 50 товаров на главной странице", async ({ app }) => {
+test("Отображение 50 товаров на главной странице", {
+    tag: "@e2e",
+}, async ({ app }) => {
     await app.sortingPage.goToMainPage();
     await test.step("По умолчанию выбрана сортировка на 25 продуктов", async () => {
         await expect(app.sortingPage.viewInfo).toBeVisible();
@@ -27,7 +31,9 @@ test("Отображение 50 товаров на главной страни�
     });
 });
 
-test("Проверка сортировки по цене", async ({ app }) => {
+test("Проверка сортировки по цене", {
+    tag: "@e2e",
+}, async ({ app }) => {
     await app.sortingPage.goToMainPage();
     await app.sortingPage.sortHighPrise();
     await test.step("Первым идет дорогой товар", async () => {

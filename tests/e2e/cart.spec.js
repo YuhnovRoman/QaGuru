@@ -1,7 +1,9 @@
 import { test } from "../../src/fixtures/fixture";
 import { expect } from "@playwright/test";
 
-test("Добавление товара в корзину", async ({ app }) => {
+test("Добавление товара в корзину", {
+    tag: "@e2e",
+}, async ({ app }) => {
     await app.sortingPage.goToMainPage();
     await app.productGrid.addToCart();
     await app.productGrid.goToCart();
@@ -13,7 +15,9 @@ test("Добавление товара в корзину", async ({ app }) => {
     });
 });
 
-test("Удаление товара из корзины", async ({ app }) => {
+test("Удаление товара из корзины", {
+    tag: "@e2e",
+}, async ({ app }) => {
     await app.sortingPage.goToMainPage();
     await app.productGrid.addToCart();
     await app.productGrid.goToCart();
