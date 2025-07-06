@@ -13,7 +13,7 @@ test("Добавление товара в корзину", async ({ app }) => {
     });
 });
 
-test("Удаление товара из корзину", async ({ app }) => {
+test("Удаление товара из корзины", async ({ app }) => {
     await app.sortingPage.goToMainPage();
     await app.productGrid.addToCart();
     await app.productGrid.goToCart();
