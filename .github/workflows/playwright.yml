@@ -79,12 +79,6 @@ jobs:
     - name: Send notification
       if: always()
       continue-on-error: true
-      env: 
-        TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-        ID: ${{ secrets.ID_CHAT }}
-      run: |
-          java \
-            "-DconfigFile=notifications/config.json" \
-            "-Dnotifications.telegram.token=${TOKEN}" \
-            "-Dnotifications.telegram.chat=${ID}" \
-            -jar notifications/allure-notifications-4.9.0.jar
+      run: java "-DconfigFile=notifications/config.json" "-Dnotifications.telegram.token=${{ secrets.TELEGRAM_TOKEN }}" "-Dnotifications.telegram.chat=${{ secrets.ID_CHAT }}" -jar notifications/allure-notifications-4.9.0.jar
+    
+
