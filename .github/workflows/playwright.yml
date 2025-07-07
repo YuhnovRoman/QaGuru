@@ -57,10 +57,32 @@ jobs:
         publish_branch: gh-pages
         publish_dir: allure-history
 
+    - name: Check secrets access
+      run: |
+        if [ -z "$TOKEN" ]; then
+          echo "❌ TELEGRAM_TOKEN is NOT accessible"
+        else
+          echo "✅ TELEGRAM_TOKEN is accessible (value hidden)"
+        fi
+    
+        if [ -z "$ID" ]; then
+          echo "❌ ID_CHAT is NOT accessible"
+        else
+          echo "✅ ID_CHAT is accessible (value hidden)"
+        fi
+      env:
+        TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        ID: ${{ secrets.ID_CHAT }}
+
     - name: Send notification
+      if: always()
+      continue-on-error: true
       env: 
         TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         ID: ${{ secrets.ID_CHAT }}
-      if: always()
-      continue-on-error: true
-      run: java "-DconfigFile=notifications/config.json" "-Dnotifications.telegram.token=${TOKEN}" "-Dnotifications.telegram.chat=${ID}" -jar notifications/allure-notifications-4.9.0.jar
+      run: |
+          java \
+            "-DconfigFile=notifications/config.json" \
+            "-Dnotifications.telegram.token=${TOKEN}" \
+            "-Dnotifications.telegram.chat=${ID}" \
+            -jar notifications/allure-notifications-4.9.0.jar
