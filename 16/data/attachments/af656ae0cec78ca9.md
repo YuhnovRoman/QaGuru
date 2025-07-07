@@ -1,0 +1,128 @@
+# Page snapshot
+
+```yaml
+- dialog "cookieconsent":
+  - text: "We use cookies to optimize our website and our service:"
+  - link "Cookie Policy":
+    - /url: https://academybugs.com/cookie-policy-eu/
+  - button "Functional only"
+  - button "Accept cookies"
+- link "Skip to content":
+  - /url: "#sq-content"
+- banner:
+  - heading "AcademyBugs.com" [level=3]:
+    - link "AcademyBugs.com":
+      - /url: https://academybugs.com/
+  - navigation:
+    - list:
+      - listitem:
+        - link "Examples of Bugs":
+          - /url: https://academybugs.com/
+      - listitem:
+        - link "Types of Bugs":
+          - /url: https://academybugs.com/types/
+      - listitem:
+        - link "Find Bugs":
+          - /url: https://academybugs.com/find-bugs/
+      - listitem:
+        - link "Report Bugs":
+          - /url: https://academybugs.com/report-bugs/
+      - listitem:
+        - link "":
+          - /url: "#"
+- main:
+  - article:
+    - text: There are no items in your cart.
+    - link "RETURN TO STOR E":
+      - /url: https://academybugs.com/find-bugs/
+- heading "Select a Currency" [level=4]
+- combobox:
+  - option "USD" [selected]
+  - option "EUR"
+  - option "GBP"
+  - option "JPY"
+- heading "Product Search" [level=4]
+- combobox
+- button "Search"
+- heading "Hot Item" [level=4]
+- link:
+  - /url: https://academybugs.com/anchor-bracelet
+  - img
+- link "Silver Heart Bracelet":
+  - /url: https://academybugs.com/anchor-bracelet
+- text: $275.00
+- heading "Store Menu" [level=4]
+- list:
+  - listitem:
+    - link "All Items":
+      - /url: https://academybugs.com/store/all-items/
+  - listitem:
+    - link "Accessories [+]":
+      - /url: "#"
+  - listitem:
+    - link "Fashion Type [+]":
+      - /url: "#"
+  - listitem:
+    - link "Women's Pants":
+      - /url: https://academybugs.com/store/womens-pants/
+- heading "Filter by Price" [level=4]
+- link "$15.00 - $19.99 (1)":
+  - /url: https://academybugs.com/my-cart/?&perpage=25&pricepoint=7
+- link "$25.00 - $49.99 (2)":
+  - /url: https://academybugs.com/my-cart/?&perpage=25&pricepoint=2
+- link "$50.00 - $99.99 (3)":
+  - /url: https://academybugs.com/my-cart/?&perpage=25&pricepoint=3
+- link "$100.00 - $299.99 (11)":
+  - /url: https://academybugs.com/my-cart/?&perpage=25&pricepoint=4
+- link "Greater Than $299.99 (1)":
+  - /url: https://academybugs.com/my-cart/?&perpage=25&pricepoint=5
+- heading "Shopping Cart" [level=4]
+- link "Shopping Cart (0)":
+  - /url: "#"
+- heading "Your Account" [level=4]
+- text: Email Address*
+- textbox
+- text: Password*
+- textbox
+- paragraph:
+  - link "Sign Up":
+    - /url: https://academybugs.com/account/?ec_page=register
+- button "SIGN IN"
+- contentinfo:
+  - list:
+    - listitem:
+      - link "uTest":
+        - /url: https://www.utest.com/academy
+        - img "uTest"
+    - listitem:
+      - link "Terms & Conditions":
+        - /url: https://www.utest.com/terms-and-conditions
+    - listitem:
+      - link "Privacy Policy":
+        - /url: https://www.utest.com/privacy-policy
+- link "":
+  - /url: "#"
+- text: ×
+- heading "What did you find out?" [level=3]
+- paragraph: What type of issue is it?
+- radio "Functional"
+- text: Functional
+- radio "Visual"
+- text: Visual
+- radio "Content"
+- text: Content
+- radio "Performance"
+- text: Performance
+- radio "Crash"
+- text: Crash
+- paragraph: What should be the expected result?
+- radio "The text should be in English language"
+- text: The text should be in English language
+- radio "The caption of the 'Return to Store' button is written with proper spacing between letters"
+- text: The caption of the 'Return to Store' button is written with proper spacing between letters
+- radio "The button should take the user to homepage"
+- text: The button should take the user to homepage
+- radio "Clicking on 'Return to Store' button should take us to the store page"
+- text: Clicking on 'Return to Store' button should take us to the store page
+- button "Submit"
+```
