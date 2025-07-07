@@ -56,3 +56,8 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
         publish_dir: allure-history
+        
+    - name: Send notification
+      if: always()
+      continue-on-error: true
+      run: java "-DconfigFile=notifications/config.json" "-Dnotifications.telegram.token=${{ secrets.TELEGRAM_TOKEN }}" "-Dnotifications.telegram.chat=${{ secrets.ID_CHAT }}" -jar notifications/allure-notifications-4.9.0.jar

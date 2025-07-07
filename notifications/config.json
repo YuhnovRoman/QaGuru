@@ -1,0 +1,21 @@
+{
+  "base": {
+    "logo": "",
+    "project": "QaGuru_diplom",
+    "environment": "",
+    "comment": "",
+    "reportLink": "https://yuhnovroman.github.io/QaGuru_academybugs-diplom",
+    "language": "ru",
+    "allureFolder": "allure-report",
+    "enableChart": true,
+    "enableSuitesPublishing": false,
+    "customData": {}
+  },
+  "telegram": {
+    "token": "",
+    "chat": "",
+    "topic": "",
+    "replyTo": "",
+    "templatePath": "/templates/telegram.ftl"
+  }
+}
