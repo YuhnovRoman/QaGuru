@@ -58,7 +58,7 @@ jobs:
         publish_dir: allure-history
 
     - name: Send notification
-      with: 
+      env: 
         TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         ID: ${{ secrets.ID_CHAT }}
       if: always()
