@@ -58,6 +58,8 @@ jobs:
         publish_dir: allure-history
 
     - name: Check secrets access
+      if: always()
+      continue-on-error: true
       run: |
         if [ -z "$TOKEN" ]; then
           echo "❌ TELEGRAM_TOKEN is NOT accessible"
