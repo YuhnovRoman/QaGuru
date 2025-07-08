@@ -15,7 +15,7 @@ jobs:
       with:
         node-version: lts/*
     - name: Install npm
-      run: npm ci
+      run: npm i
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Test
@@ -61,5 +61,3 @@ jobs:
       if: always()
       continue-on-error: true
       run: java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.9.0.jar
-    
-
