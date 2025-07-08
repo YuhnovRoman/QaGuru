@@ -21,4 +21,9 @@ export class ProductGrid {
             await this.goToCartButton.click();
         });
     };
+
+    async getPrise(locator) {
+        const text = await locator.innerText();
+        return Number(text.slice(1).replace(/[^\d.]/g, ''));
+    }
 };
