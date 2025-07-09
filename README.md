@@ -31,7 +31,7 @@
 | Язык             | JavaScript (ES6+)                          |
 | Среда выполнения | Node.js 22.15                              |
 | Тест-раннер      | Playwright Test Runner                     |
-| Отчетность       | Allure Playwright 3.3.                     |
+| Отчетность       | Allure Playwright 3.3                      |
 | CI/CD            | GitHub Actions, Jenkins                    |
 
 ## ⚙️ Требования к окружению
