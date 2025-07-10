@@ -11,9 +11,8 @@ test.describe("Сортировка товаров на главной стра�
             await expect(app.productGrid.title).toHaveCount(18); // Показано максимальное доступное количество товаров
         });
         await app.sortingPage.showTenProducts();
-        await test.step("На главной отображено 10 продуктов", async () => {
-            await expect(app.page).toHaveURL(/perpage=10/);
-            await expect(app.productGrid.title).toHaveCount(10);
+        await test.step("Отображена поп-ап с подтверждением найденного бага", async () => {
+            await expect(app.bugPage.bugPopUp).toBeVisible();
         });
     });
 

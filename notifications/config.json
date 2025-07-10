@@ -1,8 +1,8 @@
 {
   "base": {
-    "logo": "",
+    "logo": "https://playwright.dev/img/playwright-logo.svg",
     "project": "QaGuru_diplom",
-    "environment": "",
+    "environment": "env",
     "comment": "",
     "reportLink": "https://yuhnovroman.github.io/QaGuru_academybugs-diplom",
     "language": "ru",
