@@ -1,0 +1,21 @@
+{
+  "base": {
+    "logo": "https://playwright.dev/img/playwright-logo.svg",
+    "project": "QaGuru_diplom",
+    "environment": "env",
+    "comment": "",
+    "reportLink": "https://yuhnovroman.github.io/QaGuru_academybugs-diplom",
+    "language": "ru",
+    "allureFolder": "allure-report",
+    "enableChart": true,
+    "enableSuitesPublishing": false,
+    "customData": {}
+  },
+  "telegram": {
+    "token": "8184874121:AAFeYkCMm6IUxeL_G6vtHPjC-sP7uSzdGoI",
+    "chat": "-1002416790253",
+    "topic": "",
+    "replyTo": "",
+    "templatePath": "/templates/telegram.ftl"
+  }
+}

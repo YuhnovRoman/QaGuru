@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YuhnovRoman/QaGuru.git"
@@ -18,5 +20,10 @@
   "devDependencies": {
     "@playwright/test": "^1.53.2",
     "@types/node": "^24.0.10"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "allure": "^3.0.0-beta.15",
+    "allure-playwright": "^3.3.0"
   }
 }
