@@ -1,4 +1,4 @@
-import test from "@playwright/test";
+import { test } from "../../src/fixtures/fixture";
 
 export class CartPage {
     constructor(page) {
@@ -14,15 +14,21 @@ export class CartPage {
         this.currencyEur = page.locator('#ec_currency_conversion');
     };
 
+    async goToCartPage() {
+        return test.step("Переход на главую страницу", async () => {
+            await this.page.goto("my-cart/");
+        });
+    };
+
     async removeItem() {
-            return test.step("Удаление товара из корзины", async () => {
-                await this.deleteItemButton.click();
-            });
-        };
+        return test.step("Удаление товара из корзины", async () => {
+            await this.deleteItemButton.click();
+        });
+    };
 
     async returnToStore() {
-            return test.step("Возврат на главную страницу из корзины", async () => {
-                await this.toStoreButton.click();
-            });
-        };
+        return test.step("Возврат на главную страницу из корзины", async () => {
+            await this.toStoreButton.click();
+        });
+    };
 };

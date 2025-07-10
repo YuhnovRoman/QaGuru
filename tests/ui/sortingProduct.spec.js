@@ -3,7 +3,7 @@ import { expect } from "@playwright/test";
 
 test.describe("Сортировка товаров на главной странице", async () => {
     test("Отображение 10 товаров на главной странице", {
-        tag: "@e2e",
+        tag: "@ui",
     }, async ({ app }) => {
         await app.sortingPage.goToMainPage();
         await test.step("По умолчанию выбрана сортировка на 25 продуктов", async () => {
@@ -18,7 +18,7 @@ test.describe("Сортировка товаров на главной стра�
     });
 
     test("Отображение 50 товаров на главной странице", {
-        tag: "@e2e",
+        tag: "@ui",
     }, async ({ app }) => {
         await app.sortingPage.goToMainPage();
         await test.step("По умолчанию выбрана сортировка на 25 продуктов", async () => {
@@ -26,14 +26,12 @@ test.describe("Сортировка товаров на главной стра�
             await expect(app.productGrid.title).toHaveCount(18); // Показано максимальное доступное количество товаров
         });
         await app.sortingPage.showFiftyProducts();
-        await test.step("На главной отображено 18 продуктов", async () => {
-            await expect(app.page).toHaveURL(/perpage=50/);
-            await expect(app.productGrid.title).toHaveCount(18);
+        await test.step("Отображена поп-ап с подтверждением найденного бага", async () => {
+            await expect(app.bugPage.bugPopUp).toBeVisible();
         });
     });
-
     test("Проверка сортировки по цене", {
-        tag: "@e2e",
+        tag: "@ui",
     }, async ({ app }) => {
         await app.sortingPage.goToMainPage();
         await app.sortingPage.sortHighPrise();

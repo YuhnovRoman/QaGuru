@@ -41,12 +41,19 @@ export default defineConfig({
     // trace: 'on-first-retry',
     screenshot: "only-on-failure",
   },
+  expect: {
+    // Maximum time expect() should wait for the condition to be met.
+    timeout: 10000,
+  },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1920, height: 1080 },
+      },
     },
 
     // {

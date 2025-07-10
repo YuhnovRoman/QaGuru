@@ -1,4 +1,4 @@
-import test from "@playwright/test";
+import { test } from "../../src/fixtures/fixture";
 
 export class ProductGrid {
     constructor(page) {

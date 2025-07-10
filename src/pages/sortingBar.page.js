@@ -3,9 +3,9 @@ import { test } from "../../src/fixtures/fixture";
 export class SortingPage {
     constructor(page) {
         this.page = page;
-        this.viewTen =  page.getByRole('link', { name: '10' });
-        this.viewTwentyFive =  page.getByRole('link', { name: '25' });
-        this.viewFifty =  page.getByRole('link', { name: '50' });
+        this.viewTen = page.getByRole('link', { name: '10' });
+        this.viewTwentyFive = page.getByRole('link', { name: '25' });
+        this.viewFifty = page.getByRole('link', { name: '50' });
         this.viewInfo = page.getByText('Showing all 18 results');
         this.sortDropDown = page.locator('#sortfield');
     };

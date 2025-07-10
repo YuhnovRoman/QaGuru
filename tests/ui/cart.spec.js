@@ -3,7 +3,7 @@ import { expect } from "@playwright/test";
 
 test.describe("Основное управление корзиной", async () => {
     test("Добавление товара в корзину", {
-        tag: "@e2e",
+        tag: "@ui",
     }, async ({ app }) => {
         await app.sortingPage.goToMainPage();
         await app.productGrid.addToCart();
@@ -17,7 +17,7 @@ test.describe("Основное управление корзиной", async ()
     });
 
     test("Удаление товара из корзины", {
-        tag: "@e2e",
+        tag: "@ui",
     }, async ({ app }) => {
         await app.sortingPage.goToMainPage();
         await app.productGrid.addToCart();
@@ -27,9 +27,8 @@ test.describe("Основное управление корзиной", async ()
             await expect(app.cartPage.toStoreButton).toBeVisible();
         });
         await app.cartPage.returnToStore();
-        await test.step("Отображена главная страница с товарами", async () => {
-            await expect(app.sortingPage.viewInfo).toBeVisible();
-            await expect(app.productGrid.title).toHaveCount(18); // Показано максимальное доступное количество товаров
+        await test.step("Отображена поп-ап с подтверждением найденного бага", async () => {
+            await expect(app.bugPage.bugPopUp).toBeVisible();
         });
     });
 });
