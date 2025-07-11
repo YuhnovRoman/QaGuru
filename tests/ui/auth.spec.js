@@ -13,7 +13,7 @@ test.describe("Авторизация", async () => {
 
         await app.cartPage.goToCartPage();
         await app.authPage.authorization(randomUser);
-        await test.step("Отображена поп-ап с подтверждением найденного бага", async () => {
+        await test.step("Отображен поп-ап с подтверждением найденного бага", async () => {
             await expect(app.bugPage.bugPopUp).toBeVisible();
         });
     });

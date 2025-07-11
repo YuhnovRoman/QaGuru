@@ -27,7 +27,7 @@ test.describe("Основное управление корзиной", async ()
             await expect(app.cartPage.toStoreButton).toBeVisible();
         });
         await app.cartPage.returnToStore();
-        await test.step("Отображена поп-ап с подтверждением найденного бага", async () => {
+        await test.step("Отображен поп-ап с подтверждением найденного бага", async () => {
             await expect(app.bugPage.bugPopUp).toBeVisible();
         });
     });
