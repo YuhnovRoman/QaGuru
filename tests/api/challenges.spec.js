@@ -1,11 +1,10 @@
 import { expect } from "@playwright/test";
 import { test } from "../../src/fixtures/fixture";
-import { TodoBuilder } from "../../src/builder/challenge.builder";
+import { TodoBuilder } from "../../src/builder/index";
 
 let token;
 
 test.describe("Создание заданий", () => {
-    test.use({ baseURL: 'https://apichallenges.herokuapp.com/' });
     test.beforeAll(async ({ api }) => {
         token = await api.challengeStart.post();
     });

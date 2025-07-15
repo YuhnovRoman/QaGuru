@@ -1,6 +1,6 @@
 import { test } from "../../src/fixtures/fixture";
 import { expect } from "@playwright/test";
-import { UserBuilder } from "../../src/builder/user.builder";
+import { UserBuilder } from "../../src/builder/index";
 
 test.describe("Авторизация", async () => {
     test("Авторизация на странице корзины", {
