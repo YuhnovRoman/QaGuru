@@ -9,7 +9,7 @@ export class Authpage {
     };
 
     async authorization(randomUser) {
-        return test.step("Создание случайной статьи", async () => {
+        return test.step("Авторизация", async () => {
             const { email, password } = randomUser;
             await this.emailInput.fill(email);
             await this.passInput.fill(password);
