@@ -35,7 +35,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://academybugs.com/find-bugs/',
+    // baseURL: "",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     // trace: 'on-first-retry',
@@ -49,11 +49,24 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'ui',
       use: {
         ...devices['Desktop Chrome'],
         viewport: { width: 1920, height: 1080 },
+        baseURL: "https://academybugs.com/find-bugs/",
+        tag: "@ui"
       },
+      grep: /@ui/
+    },
+
+    {
+      name: 'api',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: "https://apichallenges.herokuapp.com/",
+        tag: "@api"
+      },
+      grep: /@api/
     },
 
     // {
